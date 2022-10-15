@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100vh;
   padding: 0;
@@ -6,7 +10,7 @@ html, body {
 
 .App {
   text-align: center;
-  background-color: rgb(248, 234, 244);
+  background-color: rgb(255, 251, 254);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,7 +31,17 @@ html, body {
 }
 
 a>img {
-  width: 100%;
+  width: 80%;
+  transition: 0.3s ease-in-out;
+}
+
+a>img:hover {
+  transform: scale(90%);
+  transition: 0.3s ease-in-out;
+}
+
+.selected {
+  border: 3px solid rebeccapurple;
 }
 
 #project-container {
@@ -38,7 +52,7 @@ a>img {
 }
 
 #project-icons {
-  margin: 0 5%;
+  margin: 10% 5%;
   width: 15%;
   display: flex;
   flex-direction: column;
@@ -49,21 +63,41 @@ a>img {
   width: 100%;
   margin: 25% 0;
   border-radius: 40%;
+  transition: 0.1s ease-in-out;
+}
+
+#project-icons>img:hover {
+  cursor: pointer;
 }
 
 #proj-selected-container { 
   margin: 5%;
+  width: 90%;
+  height: 80vh;
   background-color: rgb(94, 66, 108);
   display: flex;
   padding: 5%;
+  flex-wrap: wrap;
 }
 
 #proj-selected-container>img {
-  width: 30%;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid red;
 }
 
-.proj-info {
-  margin: 5%;
+#proj-main {
+  background-color: rgb(197, 228, 255);
+  border: 1px solid red;
+  margin-top: 5%;
   width: 100%;
-  background-color: aliceblue;
+  min-height: 5em;
+  display: flex;
+  flex-direction: column;
 }
+
+.proj-main p:last-child {
+  align-self: flex-end;
+}
+
+
