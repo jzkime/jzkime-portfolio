@@ -5,16 +5,16 @@ class ProjectSelected extends React.Component {
         const p = this.props.proj
         return(
         <section id='proj-selected-container' >
-            <div id='proj-top'>
-                <img src={p?.img || 'https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-12-15/f55f7ac0-3eda-11eb-ba02-af36eefa2322.jpg'} alt='wireframe'/>
-                <div id='proj-top-right'>
+            <span id='proj-top'>
+                <img src={p?.img || ''} alt='wireframe'/>
+                <span id='proj-top-right'>
                     <h3>{p?.title || 'title'}</h3>
-                </div>
+                </span>
+            </span>
+            <div id='proj-main'>
+                    <p>{p?.summary || 'summary'}</p>
+                    <p>{p?.stack || 'stack'}</p>
             </div>
-               <div id='proj-main'>
-                        <p>{p?.summary || 'summary'}</p>
-                        <p>{p?.stack || 'stack'}</p>
-                </div>
         </section>
         )
     }
