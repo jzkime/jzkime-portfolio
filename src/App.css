@@ -44,7 +44,8 @@ a>img:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 10%;
+  height: 100vh;
+  padding: 3% 5%;
   width: 88%;
 }
 
@@ -81,6 +82,23 @@ a>img:hover {
   border: 1px solid red;
 }
 
+#proj-top {
+  display: flex;
+  width:100%;
+}
+
+#proj-top>img {
+  width: 60%;
+}
+
+#proj-top-right {
+  border: 1px solid red;
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 #proj-main {
   background-color: rgb(197, 228, 255);
   border: 1px solid red;
@@ -94,5 +112,3 @@ a>img:hover {
 .proj-main p:last-child {
   align-self: flex-end;
 }
-
-

@@ -17,7 +17,6 @@ class ProjectContainer extends React.Component {
     }
 
     setSelected = (id) => {
-        console.log('container', id)
         const newpr = this.findProj(id);
         this.setState({
             ...this.state,
