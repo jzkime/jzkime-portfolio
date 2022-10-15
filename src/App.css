@@ -40,39 +40,34 @@ a>img:hover {
   transition: 0.3s ease-in-out;
 }
 
-.selected {
-  border: 3px solid rebeccapurple;
-}
-
 #project-container {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  margin: 5% 0;
+  padding: 10%;
   width: 88%;
 }
 
+.selected {
+  border-bottom: 8px solid rgb(170, 88, 251);
+}
+
 #project-icons {
-  margin: 10% 5%;
-  width: 15%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#project-icons>img {
   width: 100%;
-  margin: 25% 0;
-  border-radius: 40%;
-  transition: 0.1s ease-in-out;
 }
 
-#project-icons>img:hover {
+#project-icons>p {
+  width:50%;
+  padding: 1%;
+}
+
+#project-icons>p:hover {
   cursor: pointer;
 }
 
 #proj-selected-container { 
-  margin: 5%;
-  width: 90%;
   height: 80vh;
   background-color: rgb(94, 66, 108);
   display: flex;

@@ -7,17 +7,22 @@ class ProjectIcons extends React.Component {
     }
 
     hover(e) {
+        console.log('id', e.target)
         e.preventDefault();
         const name = e.target.id.split('-').join(' ')
         this.props.setSelected(name)
     }
     render() {
         const p = this.props.proj;
+        console.log(p)
         return(
             <div id='project-icons'>
-                <img id="Creation-Station" className={p.title === 'Creation Station' ? 'selected' : ''} onMouseOver={this.hover} src='meep.jpeg' alt='a hybrid character surrounded by: cloud, water, fire, wind' />
-                <img id="Journey-Journal" className={p.title === 'Journey Journal' ? 'selected' : ''} onMouseOver={this.hover} src='meep.jpeg' alt='pencil' />
-                {/* <img src='meep.jpeg' /> */}
+                <p id="Creation-Station" className={`project-name', ${p.title === 'Creation Station' ? 'selected' : ''}`} onClick={this.hover}>
+                    Creation Station
+                </p>
+                <p id="Journey-Journal" className={`project-name, ${p.title === 'Journey Journal' ? 'selected' : ''}`} onClick={this.hover}>
+                    Journey Journal
+                </p>
             </div>
         )
     }
