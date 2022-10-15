@@ -7,14 +7,12 @@ class ProjectIcons extends React.Component {
     }
 
     hover(e) {
-        console.log('id', e.target)
         e.preventDefault();
         const name = e.target.id.split('-').join(' ')
         this.props.setSelected(name)
     }
     render() {
         const p = this.props.proj;
-        console.log(p)
         return(
             <div id='project-icons'>
                 <p id="Creation-Station" className={`project-name', ${p.title === 'Creation Station' ? 'selected' : ''}`} onClick={this.hover}>
